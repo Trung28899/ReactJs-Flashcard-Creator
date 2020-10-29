@@ -50,20 +50,24 @@ function Cards() {
   function prevCard() {
     const compareIndex = qAndA.length;
     const currentActive = activeIndex;
-    if (activeIndex === 0) {
-      setActiveIndex(compareIndex - 1);
-    } else {
-      setActiveIndex(currentActive - 1);
+    if (compareIndex !== 0) {
+      if (activeIndex === 0) {
+        setActiveIndex(compareIndex - 1);
+      } else {
+        setActiveIndex(currentActive - 1);
+      }
     }
   }
 
   function nextCard() {
     const compareIndex = qAndA.length;
     const currentActive = activeIndex;
-    if (activeIndex === compareIndex - 1) {
-      setActiveIndex(0);
-    } else {
-      setActiveIndex(currentActive + 1);
+    if (compareIndex !== 0) {
+      if (activeIndex === compareIndex - 1) {
+        setActiveIndex(0);
+      } else {
+        setActiveIndex(currentActive + 1);
+      }
     }
   }
 
