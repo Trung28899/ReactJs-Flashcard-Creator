@@ -7,7 +7,7 @@ function Button(props) {
   const content = props.content;
   return (
     <div>
-      <button id="clear" className={buttonClasses}>
+      <button id="clear" className={buttonClasses} onClick={props.clicked}>
         <FontAwesomeIcon icon={iconObject} /> {content}
       </button>
     </div>
